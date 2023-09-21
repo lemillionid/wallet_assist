@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="49.176819mm"
+   height="34.98362mm"
+   viewBox="0 0 49.176819 34.98362"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="WingmanLogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="0.38573934"
+     inkscape:cx="937.16135"
+     inkscape:cy="583.29545"
+     inkscape:window-width="1280"
+     inkscape:window-height="776"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g11" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1-0-3"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,1,0,1,0,0.15,0,1 @ F,1,0,1,0,0.15,0,1 @ F,1,0,1,0,0.15,0,1"
+       radius="15"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="true"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8">
+      <path
+         sodipodi:type="star"
+         style="fill:#0b2228;stroke-width:1;paint-order:fill markers stroke"
+         id="path8"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="64.654129"
+         sodipodi:cy="56.159428"
+         sodipodi:r1="22.66128"
+         sodipodi:r2="11.33064"
+         sodipodi:arg1="1.5707963"
+         sodipodi:arg2="2.6179939"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         inkscape:transform-center-y="5.6653193"
+         transform="translate(40.345871,18.87712)"
+         d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 180 0 1 -5.887573,0 z"
+         inkscape:path-effect="#path-effect1-0-3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath9">
+      <path
+         sodipodi:type="star"
+         style="fill:#0b2228;stroke-width:1;paint-order:fill markers stroke"
+         id="path9"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="64.654129"
+         sodipodi:cy="56.159428"
+         sodipodi:r1="22.66128"
+         sodipodi:r2="11.33064"
+         sodipodi:arg1="1.5707963"
+         sodipodi:arg2="2.6179939"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         inkscape:transform-center-y="5.6653193"
+         d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 180 0 1 -5.887573,0 z"
+         inkscape:path-effect="#path-effect1-0-3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath9-1">
+      <path
+         sodipodi:type="star"
+         style="fill:#0b2228;stroke-width:1;paint-order:fill markers stroke"
+         id="path9-9"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="64.654129"
+         sodipodi:cy="56.159428"
+         sodipodi:r1="22.66128"
+         sodipodi:r2="11.33064"
+         sodipodi:arg1="1.5707963"
+         sodipodi:arg2="2.6179939"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         inkscape:transform-center-y="5.6653193"
+         d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 -180 0 1 -5.887573,0 z"
+         inkscape:path-effect="#path-effect1-0-3-2" />
+    </clipPath>
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1-0-3-2"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,1,0,1,0,0.15,0,1 @ F,1,0,1,0,0.15,0,1 @ F,1,0,1,0,0.15,0,1"
+       radius="15"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="true"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8-4">
+      <path
+         sodipodi:type="star"
+         style="fill:#0b2228;stroke-width:1;paint-order:fill markers stroke"
+         id="path8-5"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="64.654129"
+         sodipodi:cy="56.159428"
+         sodipodi:r1="22.66128"
+         sodipodi:r2="11.33064"
+         sodipodi:arg1="1.5707963"
+         sodipodi:arg2="2.6179939"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         inkscape:transform-center-y="5.6653193"
+         transform="translate(40.345871,18.87712)"
+         d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 180 0 1 -5.887573,0 z"
+         inkscape:path-effect="#path-effect1-0-3-2" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-71.104528,-87.508188)">
+    <g
+       id="g11"
+       transform="translate(-1.3695639)">
+      <g
+         id="g9"
+         transform="translate(-15.389044,23.802281)"
+         inkscape:export-filename="wmlogo-f.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <path
+           id="path1"
+           inkscape:transform-center-y="5.6653193"
+           d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 -180 0 1 -5.887573,0 z"
+           style="opacity:1;fill:#00aad4;stroke-width:1;paint-order:fill markers stroke"
+           transform="translate(53.17325,23.268016)" />
+        <path
+           id="path1-4-7"
+           inkscape:transform-center-y="5.6653193"
+           d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 -180 0 1 -5.887573,0 z"
+           style="opacity:0.5;fill:#2affd5;stroke-width:1;paint-order:fill markers stroke"
+           transform="translate(47.535955,21.323874)" />
+        <path
+           id="path1-4"
+           transform="translate(40.345871,18.87712)"
+           clip-path="url(#clipPath9)"
+           inkscape:transform-center-y="5.6653193"
+           d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 -180 0 1 -5.887573,0 z"
+           style="fill:#1838bf;fill-opacity:1;stroke-width:1;paint-order:fill markers stroke" />
+        <path
+           id="rect8"
+           style="opacity:1;fill:#1838bf;fill-opacity:1;stroke-linecap:square;paint-order:fill markers stroke"
+           d="m 111.40881,74.238525 h 21.3281 c 2.38389,0 4.30304,1.919156 4.30304,4.30304 0,2.383884 -1.91915,4.303039 -4.30304,4.303039 h -21.3281 c -2.38389,0 -4.30304,-1.919155 -4.30304,-4.303039 0,-2.383884 1.91915,-4.30304 4.30304,-4.30304 z" />
+        <path
+           id="path2"
+           style="opacity:1;fill:#f9f9f9;stroke-width:0.911935;paint-order:fill markers stroke"
+           d="m 135.34984,78.541565 a 1.9725198,1.9725198 0 0 1 -1.97252,1.97252 1.9725198,1.9725198 0 0 1 -1.97252,-1.97252 1.9725198,1.9725198 0 0 1 1.97252,-1.97252 1.9725198,1.9725198 0 0 1 1.97252,1.97252 z" />
+        <path
+           id="path7"
+           style="color:#000000;fill:#ffffff;stroke:#ffffff;stroke-linecap:square;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke"
+           d="m 93.758101,64.205907 0.128675,0.237712 11.101644,20.478336 5.56814,-9.757544 0.24805,-0.435632 h -1.15187 l -4.64106,8.136454 -10.116697,-18.659326 z"
+           clip-path="url(#clipPath8)" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:500;font-size:18.6691px;font-family:Tajawal;-inkscape-font-specification:'Tajawal Medium';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;opacity:1;fill:#1838bf;fill-opacity:1;stroke:none;stroke-width:8.35309;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         x="176.79556"
+         y="107.52945"
+         id="text9"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Futura Md BT';-inkscape-font-specification:'Futura Md BT Bold Italic';stroke-width:8.35309"
+           x="176.79556"
+           y="107.52945">WING<tspan
+   style="fill:#00aad4;fill-opacity:1"
+   id="tspan10">MAN</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.49299px;font-family:'Futura Md BT';-inkscape-font-specification:'Futura Md BT Bold Italic';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;opacity:1;fill:#004657;fill-opacity:1;stroke:none;stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         x="126.63574"
+         y="116.36916"
+         id="text11"><tspan
+           sodipodi:role="line"
+           id="tspan11"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Futura Md BT';-inkscape-font-specification:'Futura Md BT';text-align:start;text-anchor:start;fill:#004657;fill-opacity:1;stroke-width:3.8"
+           x="126.63574"
+           y="116.36916">Your Finance Assistance</tspan></text>
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.91209;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect11"
+         width="255.45"
+         height="210"
+         x="326.94452"
+         y="1.6513937e-07"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-weight:500;font-size:18.6691px;font-family:Tajawal;-inkscape-font-specification:'Tajawal Medium';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#1838bf;fill-opacity:1;stroke:none;stroke-width:8.35309;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         x="454.59659"
+         y="129.35651"
+         id="text9-1"><tspan
+           sodipodi:role="line"
+           id="tspan9-8"
+           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Futura Md BT';-inkscape-font-specification:'Futura Md BT Bold Italic';stroke-width:8.35309"
+           x="454.59659"
+           y="129.35651">WING<tspan
+   style="fill:#00aad4;fill-opacity:1"
+   id="tspan10-7">MAN</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.49299px;font-family:'Futura Md BT';-inkscape-font-specification:'Futura Md BT Bold Italic';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#004657;fill-opacity:1;stroke:none;stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         x="408.68588"
+         y="138.22043"
+         id="text11-1"><tspan
+           sodipodi:role="line"
+           id="tspan11-5"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Futura Md BT';-inkscape-font-specification:'Futura Md BT';text-align:start;text-anchor:start;fill:#004657;fill-opacity:1;stroke-width:3.8"
+           x="408.68588"
+           y="138.22043">Your Finance Assistance</tspan></text>
+      <g
+         id="g9-2"
+         transform="translate(342.21797,6.3104693)">
+        <path
+           id="path1-5"
+           inkscape:transform-center-y="5.6653193"
+           d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 -180 0 1 -5.887573,0 z"
+           style="opacity:1;fill:#00aad4;stroke-width:1;paint-order:fill markers stroke"
+           transform="translate(53.17325,23.268016)" />
+        <path
+           id="path1-4-7-1"
+           inkscape:transform-center-y="5.6653193"
+           d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 -180 0 1 -5.887573,0 z"
+           style="opacity:0.5;fill:#2affd5;stroke-width:1;paint-order:fill markers stroke"
+           transform="translate(47.535955,21.323874)" />
+        <path
+           id="path1-4-3"
+           transform="translate(40.345871,18.87712)"
+           clip-path="url(#clipPath9-1)"
+           inkscape:transform-center-y="5.6653193"
+           d="M 61.710343,73.721919 47.972672,49.927576 a 3.399192,3.399192 120 0 1 2.943786,-5.098788 l 27.475341,-1e-6 a 3.399192,3.399192 59.999998 0 1 2.943787,5.098788 l -13.73767,23.794344 a 3.399192,3.399192 -180 0 1 -5.887573,0 z"
+           style="fill:#1838bf;fill-opacity:1;stroke-width:1;paint-order:fill markers stroke" />
+        <path
+           id="rect8-9"
+           style="opacity:1;fill:#1838bf;fill-opacity:1;stroke-linecap:square;paint-order:fill markers stroke"
+           d="m 111.40881,74.238525 h 21.3281 c 2.38389,0 4.30304,1.919156 4.30304,4.30304 0,2.383884 -1.91915,4.303039 -4.30304,4.303039 h -21.3281 c -2.38389,0 -4.30304,-1.919155 -4.30304,-4.303039 0,-2.383884 1.91915,-4.30304 4.30304,-4.30304 z" />
+        <path
+           id="path2-7"
+           style="opacity:1;fill:#f9f9f9;stroke-width:0.911935;paint-order:fill markers stroke"
+           d="m 135.34984,78.541565 a 1.9725198,1.9725198 0 0 1 -1.97252,1.97252 1.9725198,1.9725198 0 0 1 -1.97252,-1.97252 1.9725198,1.9725198 0 0 1 1.97252,-1.97252 1.9725198,1.9725198 0 0 1 1.97252,1.97252 z" />
+        <path
+           id="path7-3"
+           style="color:#000000;fill:#ffffff;stroke:#ffffff;stroke-linecap:square;stroke-opacity:1;-inkscape-stroke:none;paint-order:fill markers stroke"
+           d="m 93.758101,64.205907 0.128675,0.237712 11.101644,20.478336 5.56814,-9.757544 0.24805,-0.435632 h -1.15187 l -4.64106,8.136454 -10.116697,-18.659326 z"
+           clip-path="url(#clipPath8-4)" />
+      </g>
+    </g>
+  </g>
+</svg>
