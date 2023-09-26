@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class BodyScreen extends StatefulWidget {
-  const BodyScreen({super.key});
+  const BodyScreen({Key? key});
 
   @override
   State<BodyScreen> createState() => _BodyScreenState();
 }
 
 class _BodyScreenState extends State<BodyScreen> {
+  double bankTransferAmount = 500000;
+  double shoppingAmount = 250000;
+  double topupAmount = 100000;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -17,6 +21,7 @@ class _BodyScreenState extends State<BodyScreen> {
         vertical: 10,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,10 +76,6 @@ class _BodyScreenState extends State<BodyScreen> {
               ),
               Spacer(),
               Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 35,
-                  vertical: 10,
-                ),
                 height: 70,
                 width: 140,
                 decoration: BoxDecoration(
@@ -91,45 +92,54 @@ class _BodyScreenState extends State<BodyScreen> {
                     end: Alignment.bottomRight,
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Add',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                child: ElevatedButton(
+                  onPressed: () {
+                    _showAddRecordDialog(context);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.transparent,
+                    elevation: 0,
+                    padding: EdgeInsets.zero,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(width: 20),
+                      Text(
+                        'Add',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Spacer(),
+                      Icon(
+                        Icons.add_box_rounded,
                         color: Colors.white,
                       ),
-                    ),
-                    Spacer(),
-                    Icon(
-                      Icons.add_box_rounded,
-                      color: Colors.white,
-                    ),
-                  ],
+                      SizedBox(width: 20),
+                    ],
+                  ),
                 ),
               ),
             ],
           ),
-          SizedBox(height: 20), // Jarak vertikal sebelum box circular
-
-          // Container baru untuk diagram lingkaran
+          SizedBox(height: 20),
           Container(
-            padding: EdgeInsets.all(20), // Padding untuk judul
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15.0), // Bentuk circular
-              color: Colors.blue, // Warna background container
+              borderRadius: BorderRadius.circular(15.0),
+              color: Colors.blue,
             ),
             child: Column(
-              // Menggunakan Column untuk mengelompokkan teks dan ikon
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  // Baris pertama berisi teks dan ikon rata kiri
                   children: [
                     Expanded(
                       child: Text(
-                        'Expenses Structure', // Judul Expenses Structure
+                        'Expenses Structure',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -138,28 +148,221 @@ class _BodyScreenState extends State<BodyScreen> {
                       ),
                     ),
                     Icon(
-                      // Ikone "titik tiga vertikal" (more vertical) rata kanan
                       Icons.more_vert,
                       color: Colors.white,
                     ),
                   ],
                 ),
-                SizedBox(height: 10), // Jarak vertikal sebelum diagram lingkaran
+                SizedBox(height: 10),
                 AspectRatio(
-                  aspectRatio: 1.0, // Menjaga rasio aspek diagram tetap 1:1
+                  aspectRatio: 1.0,
                   child: SfCircularChart(
                     series: <CircularSeries>[
                       PieSeries<PieData, String>(
                         dataSource: [
-                          PieData('Expense 1', 30), // Misalnya, 30% biaya 1
-                          PieData('Expense 2', 40), // Misalnya, 40% biaya 2
-                          // Tambahkan data series lain jika diperlukan
+                          PieData('Expense 1', 30),
+                          PieData('Expense 2', 40),
                         ],
                         xValueMapper: (PieData data, _) => data.category,
                         yValueMapper: (PieData data, _) => data.value,
-                        dataLabelSettings: DataLabelSettings(isVisible: true), // Tampilkan label data
+                        dataLabelSettings: DataLabelSettings(isVisible: true),
                       ),
                     ],
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Add Record',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20),
+          Container(
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+              color: Colors.blue,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Last Record Overview',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    Icon(
+                      Icons.more_vert,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Transfer',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Bank',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Rp.${bankTransferAmount.toStringAsFixed(2)}',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          '2023-09-26',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Shopping',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Merchant',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Rp.${shoppingAmount.toStringAsFixed(2)}',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          '2023-09-25',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Top-up',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Merchant',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Rp.${topupAmount.toStringAsFixed(2)}',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          '2023-09-24',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Add Record',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
@@ -167,6 +370,46 @@ class _BodyScreenState extends State<BodyScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  void _showAddRecordDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Add Record'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                leading: Icon(Icons.account_balance),
+                title: Text('Bank Sync'),
+                onTap: () {
+                  // Tambahkan logika yang sesuai saat "Bank Sync" dipilih
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.import_export),
+                title: Text('Imports'),
+                onTap: () {
+                  // Tambahkan logika yang sesuai saat "Imports" dipilih
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.touch_app),
+                title: Text('Manual Input'),
+                onTap: () {
+                  // Tambahkan logika yang sesuai saat "Manual Input" dipilih
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }
@@ -177,175 +420,3 @@ class PieData {
 
   PieData(this.category, this.value);
 }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: EdgeInsets.symmetric(
-//         horizontal: 20,
-//         vertical: 10,
-//       ),
-//       child: Column(
-//         children: [
-//           Row(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: [
-//               Text(
-//                 'List of Accounts',
-//                 style: TextStyle(
-//                   fontWeight: FontWeight.bold,
-//                   fontSize: 18,
-//                 ),
-//               ),
-//               IconButton(
-//                 onPressed: () {},
-//                 icon: Icon(Icons.arrow_right_rounded),
-//               ),
-//             ],
-//           ),
-//           SizedBox(height: 10),
-//           Row(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: [
-//               Container(
-//                 padding: EdgeInsets.all(10),
-//                 height: 70,
-//                 width: 200,
-//                 decoration: BoxDecoration(
-//                   color: Colors.blue,
-//                   borderRadius: BorderRadius.all(
-//                     Radius.circular(15),
-//                   ),
-//                 ),
-//                 child: Column(
-//                   crossAxisAlignment: CrossAxisAlignment.start,
-//                   mainAxisAlignment: MainAxisAlignment.center,
-//                   children: [
-//                     Text(
-//                       'Cash',
-//                       style: TextStyle(
-//                         color: Colors.white,
-//                       ),
-//                     ),
-//                     Text(
-//                       'Rp.000.000.000,00',
-//                       style: TextStyle(
-//                         fontWeight: FontWeight.bold,
-//                         fontSize: 16,
-//                         color: Colors.white,
-//                       ),
-//                     )
-//                   ],
-//                 ),
-//               ),
-//               Spacer(),
-//               Container(
-//                 padding: EdgeInsets.symmetric(
-//                   horizontal: 35,
-//                   vertical: 10,
-//                 ),
-//                 height: 70,
-//                 width: 140,
-//                 decoration: BoxDecoration(
-//                   color: Colors.deepOrange,
-//                   borderRadius: BorderRadius.all(
-//                     Radius.circular(15),
-//                   ),
-//                   gradient: LinearGradient(
-//                     colors: [
-//                       Colors.red.shade800,
-//                       Colors.deepOrange,
-//                     ],
-//                     begin: Alignment.topLeft,
-//                     end: Alignment.bottomRight,
-//                   ),
-//                 ),
-//                 child: Row(
-//                   mainAxisAlignment: MainAxisAlignment.center,
-//                   children: [
-//                     Text(
-//                       'Add',
-//                       style: TextStyle(
-//                         fontWeight: FontWeight.bold,
-//                         fontSize: 20,
-//                         color: Colors.white,
-//                       ),
-//                     ),
-//                     Spacer(),
-//                     Icon(
-//                       Icons.add_box_rounded,
-//                       color: Colors.white,
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ),
-//           SizedBox(height: 20), // Jarak vertikal sebelum box circular
-
-//           // Container baru untuk diagram lingkaran
-//           Container(
-//             height: double.infinity,
-//             width: double.infinity,
-//             padding: EdgeInsets.all(20), // Padding untuk judul
-//             decoration: BoxDecoration(
-//               borderRadius: BorderRadius.circular(15.0), // Bentuk circular
-//               color: Colors.blue, // Warna background container
-//             ),
-//             child: Column(
-//               // Menggunakan Column untuk mengelompokkan teks dan ikon
-//               children: [
-//                 Row(
-//                   // Baris pertama berisi teks dan ikon rata kiri
-//                   children: [
-//                     Expanded(
-//                       child: Text(
-//                         'Expenses Structure', // Judul Expenses Structure
-//                         style: TextStyle(
-//                           fontSize: 18,
-//                           fontWeight: FontWeight.bold,
-//                           color: Colors.white,
-//                         ),
-//                       ),
-//                     ),
-//                     Icon(
-//                       // Ikone "titik tiga vertikal" (more vertical) rata kanan
-//                       Icons.more_vert,
-//                       color: Colors.white,
-//                     ),
-//                   ],
-//                 ),
-//                 SizedBox(height: 10), // Jarak vertikal sebelum diagram lingkaran
-//                 AspectRatio(
-//                   aspectRatio: 1.0, // Menjaga rasio aspek diagram tetap 1:1
-//                   child: SfCircularChart(
-//                     series: <CircularSeries>[
-//                       PieSeries<PieData, String>(
-//                         dataSource: [
-//                           PieData('Expense 1', 30), // Misalnya, 30% biaya 1
-//                           PieData('Expense 2', 40), // Misalnya, 40% biaya 2
-//                           // Tambahkan data series lain jika diperlukan
-//                         ],
-//                         xValueMapper: (PieData data, _) => data.category,
-//                         yValueMapper: (PieData data, _) => data.value,
-//                         dataLabelSettings: DataLabelSettings(isVisible: true), // Tampilkan label data
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-// class PieData {
-//   final String category;
-//   final double value;
-
-//   PieData(this.category, this.value);
-// }
