@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:wallet_assist/src/features/banksycn/bank_sycn.dart';
+import 'package:wallet_assist/src/features/imports/imports.dart';
+import 'package:wallet_assist/src/features/manualinput/manual_input.dart';
 
 class BodyScreen extends StatefulWidget {
   const BodyScreen({Key? key});
@@ -396,6 +398,7 @@ class _BodyScreenState extends State<BodyScreen> {
                 title: Text('Imports'),
                 onTap: () {
                   Navigator.of(context).pop();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ImportsPage()));
                 },
               ),
               ListTile(
@@ -403,6 +406,7 @@ class _BodyScreenState extends State<BodyScreen> {
                 title: Text('Manual Input'),
                 onTap: () {
                   Navigator.of(context).pop();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ManualInputPage()));
                 },
               ),
             ],
