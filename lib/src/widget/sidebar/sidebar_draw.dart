@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_assist/src/features/banksycn/bank_sycn.dart';
 
 class SideDrawer extends StatefulWidget {
   const SideDrawer({super.key});
@@ -64,7 +65,9 @@ class _SideDrawerState extends State<SideDrawer> {
               ),
             ),
             leading: const Icon(Icons.house),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => BankSyncPage()));
+            },
           ),
           ListTile(
             title: const Text(

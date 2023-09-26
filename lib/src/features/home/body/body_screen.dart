@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:wallet_assist/src/features/banksycn/bank_sycn.dart';
 
 class BodyScreen extends StatefulWidget {
   const BodyScreen({Key? key});
@@ -386,15 +387,14 @@ class _BodyScreenState extends State<BodyScreen> {
                 leading: Icon(Icons.account_balance),
                 title: Text('Bank Sync'),
                 onTap: () {
-                  // Tambahkan logika yang sesuai saat "Bank Sync" dipilih
                   Navigator.of(context).pop();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => BankSyncPage()));
                 },
               ),
               ListTile(
                 leading: Icon(Icons.import_export),
                 title: Text('Imports'),
                 onTap: () {
-                  // Tambahkan logika yang sesuai saat "Imports" dipilih
                   Navigator.of(context).pop();
                 },
               ),
@@ -402,7 +402,6 @@ class _BodyScreenState extends State<BodyScreen> {
                 leading: Icon(Icons.touch_app),
                 title: Text('Manual Input'),
                 onTap: () {
-                  // Tambahkan logika yang sesuai saat "Manual Input" dipilih
                   Navigator.of(context).pop();
                 },
               ),
