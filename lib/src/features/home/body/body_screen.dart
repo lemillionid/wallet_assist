@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:wallet_assist/src/features/banksycn/bank_sycn.dart';
+import 'package:wallet_assist/src/features/choose_account.dart';
 import 'package:wallet_assist/src/features/imports/imports.dart';
 import 'package:wallet_assist/src/features/manualinput/manual_input.dart';
 
@@ -97,7 +98,7 @@ class _BodyScreenState extends State<BodyScreen> {
                 ),
                 child: ElevatedButton(
                   onPressed: () {
-                    _showAddRecordDialog(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseAccountTypePage()));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.transparent,
@@ -373,46 +374,6 @@ class _BodyScreenState extends State<BodyScreen> {
           ),
         ],
       ),
-    );
-  }
-
-  void _showAddRecordDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Add Record'),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              ListTile(
-                leading: Icon(Icons.account_balance),
-                title: Text('Bank Sync'),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => BankSyncPage()));
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.import_export),
-                title: Text('Imports'),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ImportsPage()));
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.touch_app),
-                title: Text('Manual Input'),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ManualInputPage()));
-                },
-              ),
-            ],
-          ),
-        );
-      },
     );
   }
 }

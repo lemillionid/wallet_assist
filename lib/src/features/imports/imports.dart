@@ -1,11 +1,114 @@
 import 'package:flutter/material.dart';
 
-class ImportsPage extends StatelessWidget {
+class ImportsPage extends StatefulWidget {
+  @override
+  _ImportsPageState createState() => _ImportsPageState();
+}
+
+class _ImportsPageState extends State<ImportsPage> {
+  String selectedAccountType = 'General';
+  Color selectedColor = Colors.red;
+
+  void _showAccountTypeDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            'Select Account Type',
+            style: TextStyle(fontSize: 16),
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              ListTile(
+                title: Text('General'),
+                onTap: () {
+                  setState(() {
+                    selectedAccountType = 'General';
+                  });
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                title: Text('Private'),
+                onTap: () {
+                  setState(() {
+                    selectedAccountType = 'Private';
+                  });
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void _showColorDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            'Select Color',
+            style: TextStyle(fontSize: 16),
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              ListTile(
+                title: Container(
+                  width: 24,
+                  height: 24,
+                  color: Colors.red,
+                ),
+                onTap: () {
+                  setState(() {
+                    selectedColor = Colors.red;
+                  });
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                title: Container(
+                  width: 24,
+                  height: 24,
+                  color: Colors.green,
+                ),
+                onTap: () {
+                  setState(() {
+                    selectedColor = Colors.green;
+                  });
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                title: Container(
+                  width: 24,
+                  height: 24,
+                  color: Colors.blue,
+                ),
+                onTap: () {
+                  setState(() {
+                    selectedColor = Colors.blue;
+                  });
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Account'),
+        title: Text('New account for import'),
         centerTitle: true,
       ),
       body: Center(
@@ -15,57 +118,67 @@ class ImportsPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'Add Account',
-                textAlign: TextAlign.center,
+                'Account Name',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 25),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Name'),
-                        TextFormField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                      ],
-                    ),
+              TextFormField(
+                decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green),
                   ),
-                  SizedBox(width: 25),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Color'),
-                        DropdownButton<String>(
-                          value: 'Red',
-                          onChanged: (String? newValue) {},
-                          items: <String>['Red', 'Green', 'Blue'].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                ),
               ),
               SizedBox(height: 25),
-              Text('Account Type'),
+              Text(
+                'Bank Account Number',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green),
+                  ),
+                ),
+              ),
+              SizedBox(height: 25),
+              Text(
+                'Account Type',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              GestureDetector(
+                onTap: _showAccountTypeDialog,
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.green,
+                    ),
+                    borderRadius: BorderRadius.circular(4.0),
+                  ),
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(selectedAccountType),
+                ),
+              ),
+              SizedBox(height: 25),
+              Text(
+                'Currency',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               DropdownButton<String>(
-                value: 'General',
+                value: 'IDR',
                 onChanged: (String? newValue) {},
-                items: <String>['General', 'Private'].map<DropdownMenuItem<String>>((String value) {
+                items: <String>['IDR', 'USD', 'EUR'].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),
@@ -73,43 +186,29 @@ class ImportsPage extends StatelessWidget {
                 }).toList(),
               ),
               SizedBox(height: 25),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Starting Amount'),
-                        TextFormField(
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                      ],
+              Text(
+                'Color',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              GestureDetector(
+                onTap: _showColorDialog,
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.green,
                     ),
+                    borderRadius: BorderRadius.circular(4.0),
                   ),
-                  SizedBox(width: 25),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Currency'),
-                        DropdownButton<String>(
-                          value: 'IDR',
-                          onChanged: (String? newValue) {},
-                          items: <String>['IDR', 'USD', 'EUR'].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
-                        ),
-                      ],
-                    ),
+                  padding: EdgeInsets.all(10.0),
+                  child: Container(
+                    width: 24,
+                    height: 24,
+                    color: selectedColor,
                   ),
-                ],
+                ),
               ),
               SizedBox(height: 25),
               Row(
