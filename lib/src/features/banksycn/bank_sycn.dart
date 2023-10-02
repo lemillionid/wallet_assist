@@ -58,7 +58,7 @@ class _BankSyncPageState extends State<BankSyncPage> {
               isExpanded: true,
               underline: Container(
                 height: 2,
-                color: Colors.blue, // Warna garis bantu
+                color: Colors.blue,
               ),
             ),
             SizedBox(height: 25),
@@ -85,17 +85,17 @@ class _BankSyncPageState extends State<BankSyncPage> {
               isExpanded: true,
               underline: Container(
                 height: 2,
-                color: Colors.blue, // Warna garis bantu
+                color: Colors.blue,
               ),
             ),
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                // Tambahkan logika untuk tombol "Continue" di sini
+                
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.green, // Warna latar belakang hijau
-                onPrimary: Colors.white, // Warna teks putih
+                primary: Colors.green,
+                onPrimary: Colors.white, 
               ),
               child: Text(
                 'Continue',
